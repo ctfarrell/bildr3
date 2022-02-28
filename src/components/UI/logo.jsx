@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <NextLink href="/" passHref>
       <chakra.a fontSize="2rem" fontWeight="700">
-        LOGO
+        Chance's Bildr Assignment
       </chakra.a>
     </NextLink>
   );

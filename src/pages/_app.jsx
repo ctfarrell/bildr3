@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { DefaultSeo } from "next-seo";
+import { MoralisProvider } from "react-moralis";
 
 import theme from "@/theme/index";
 import Layout from "@/layouts/global";
@@ -14,12 +15,13 @@ import "@/styles/index.css";
 const MyApp = ({ Component, pageProps }) => (
   <>
     <DefaultSeo {...SEO} />
-
-    <ChakraProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <MoralisProvider appId="mOZeQBOivRoJ97kPtWuE2Xh0hv3puoY0ydgHsahZ" serverUrl="https://bttofcpomrb3.usemoralis.com:2053/server">
+      <ChakraProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </MoralisProvider>
   </>
 );
 
