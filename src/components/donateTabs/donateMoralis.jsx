@@ -26,7 +26,7 @@ export default function DonateMoralis() {
             <Text>
             Sign In With Moralis
             </Text>
-            <Button onClick={authenticate} m={2} isLoading={loadingState}>
+            <Button onClick={() => authenticate({ signingMessage: "Authorize linking of your wallet" })} m={2}>
                 Sign In
             </Button>
         </Box>

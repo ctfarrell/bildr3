@@ -11,7 +11,7 @@ import NextImage from "next/image";
 import { seo, data } from "config";
 import Link from "next/link";
 
-const Home = () => {
+export default function Home() {
   const color = useColorModeValue("telegram.500", "telegram.400");
 
   const isOdd = (num) => num % 2;
@@ -68,7 +68,7 @@ const Home = () => {
               Doing
             </Text>{" "}
             an assignment for{" "}
-            <Text as="span" color="purple">
+            <Text as="span" color="pink">
               ISYS
             </Text>{" "}
             <Text as="span" color="green">
@@ -135,4 +135,3 @@ const Home = () => {
   );
 };
 
-export default Home;

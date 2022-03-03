@@ -11,7 +11,14 @@ import "@fontsource/poppins/latin-600.css";
 import "@fontsource/poppins/latin-700.css";
 import "@/styles/index.css";
 
+export async function getServerSideProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
+
 const MyApp = ({ Component, pageProps }) => (
+  
   <>
     <DefaultSeo {...SEO} />
         <MoralisProvider appId="mOZeQBOivRoJ97kPtWuE2Xh0hv3puoY0ydgHsahZ" serverUrl="https://bttofcpomrb3.usemoralis.com:2053/server">

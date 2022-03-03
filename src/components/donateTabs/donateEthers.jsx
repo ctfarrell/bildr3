@@ -47,7 +47,7 @@ export default function DonateEthers() {
                 console.log("transaction result: ",result)
                 toast({
                     title: 'Transaction Submitted',
-                    description: "Wait a moment while it is confirmed on the blockchain",
+                    description: "Please wait a moment while it is confirmed on the blockchain",
                     status: 'success',
                     duration: 9000,
                     isClosable: true,
