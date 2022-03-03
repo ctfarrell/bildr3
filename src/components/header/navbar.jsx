@@ -57,7 +57,7 @@ const Navbar = () => {
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
         >
-          <NextLink href="/donate">
+          <NextLink href="/message">
             <a onClick={closeMenu}>Message</a>
           </NextLink>
         </chakra.li>

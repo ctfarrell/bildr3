@@ -3,6 +3,7 @@ import {
     Button,
     Input,
     Heading,
+    Code,
     Text,
     useColorModeValue,
   } from "@chakra-ui/react";
@@ -57,7 +58,10 @@ export default function DonateWeb3() {
         <Button leftIcon = {<RepeatIcon/>} m={2} colorScheme = "blue" variant = "outline" onClick={getMessage}>
         Check Message
         </Button>
-        <Text m={2}>{"Current Message with Web3: " + message}</Text>
+        <Box display = "flex">
+            <Text m={2}>Current Message with Web3:</Text>{" "}
+            <Code m={2} variant = "solid" colorScheme = "blue">{message}</Code>   
+        </Box>
         <Input m={2} onChange = {handleChange} placeholder='message' size='md' />
         <Button leftIcon = {<EditIcon/>} m={2} colorScheme = 'blue' onClick={updateMessage} isLoading = {updateLoading} loadingText = "Updating Text">
             Update Message

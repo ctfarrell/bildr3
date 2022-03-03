@@ -19,10 +19,7 @@ import {
   import DonateMoralis from "@/components/donateTabs/donateMoralis";
   import DonateEthers from "@/components/donateTabs/donateEthers";
 
-  export default function donate() {
-      function clickFiller() {
-          console.debug("Button Was Clicked")
-      }
+  export default function message() {
     return (
         <Box>
             <chakra.a fontSize="2rem" fontWeight="700">

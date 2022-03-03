@@ -3,6 +3,7 @@ import {
     Button,
     Input,
     Heading,
+    Code,
     useToast,
     Text,
     useColorModeValue,
@@ -70,7 +71,10 @@ export default function DonateEthers() {
         <Button leftIcon = {<RepeatIcon/>} m={2} colorScheme = "pink" variant = "outline" onClick={getMessage}>
         Check Message
         </Button>
-        <Text m={2}>{"Current Message with Ethers: " + message}</Text>
+        <Box display = "flex">
+            <Text m={2}>Current Message with Ethers:</Text>{" "}
+            <Code m={2} variant = "solid" colorScheme = "pink">{message}</Code>   
+        </Box>
         <Input m={2} onChange = {handleChange} placeholder='message' size='md' />
         <Button leftIcon = {<EditIcon/>} m={2} colorScheme = 'pink' onClick={updateMessage} isLoading = {updateLoading} loadingText = "Updating Text">
             Update Message

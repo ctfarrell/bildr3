@@ -79,7 +79,7 @@ export default function Home() {
             I used a template for the website, but I think
             I did enough to get a decent grade.
           </Text>
-          <Link href = "/donate">
+          <Link href = "/message">
             <Button
               colorScheme="telegram"
               variant="outline"
