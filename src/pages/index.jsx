@@ -9,6 +9,7 @@ import { NextSeo } from "next-seo";
 import NextImage from "next/image";
 
 import { seo, data } from "config";
+import Link from "next/link";
 
 const Home = () => {
   const color = useColorModeValue("telegram.500", "telegram.400");
@@ -57,37 +58,37 @@ const Home = () => {
         />
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm John Doe{" "}
+            Hi, I'm Chance{" "}
             <span role="img" aria-label="hand">
               👋🏻
             </span>
           </Heading>
           <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
             <Text as="span" color={color}>
-              Building
+              Doing
             </Text>{" "}
-            digital products, Brands, And experience.
+            an assignment for{" "}
+            <Text as="span" color="purple">
+              ISYS
+            </Text>{" "}
+            <Text as="span" color="green">
+              5453
+            </Text>
           </Heading>
           <Text py="4">
-            A{" "}
-            <Text as="span" fontWeight="600">
-              web designer
-            </Text>{" "}
-            and{" "}
-            <Text as="span" fontWeight="600">
-              front-end web developer
-            </Text>{" "}
-            based in the US, I specialize in UI/UX design, Responsive web
-            design, And accessibility.
+            I used a template for the website, but I think
+            I did enough to get a decent grade.
           </Text>
-          <Button
-            colorScheme="telegram"
-            variant="ghost"
-            size="lg"
-            fontSize="20px"
-          >
-            Get in touch
-          </Button>
+          <Link href = "/donate">
+            <Button
+              colorScheme="telegram"
+              variant="outline"
+              size="lg"
+              fontSize="20px"
+            >
+              Check it Out
+            </Button>
+          </Link>
         </Box>
       </Box>
 

@@ -13,6 +13,7 @@ export default function DonateMoralis() {
     const { authenticate, isAuthenticated, user } = useMoralis();
     const [loadingState, setLoadingState] = useState(false)
     function loadingAuthenticate(){
+        console.debug("attempted to login")
         setLoadingState(true)
         authenticate
         setLoadingState(false)
@@ -25,7 +26,7 @@ export default function DonateMoralis() {
             <Text>
             Sign In With Moralis
             </Text>
-            <Button onClick={loadingAuthenticate} m={2} isLoading={loadingState}>
+            <Button onClick={authenticate} m={2} isLoading={loadingState}>
                 Sign In
             </Button>
         </Box>
