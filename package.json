@@ -25,6 +25,8 @@
     "@walletconnect/web3-provider": "^1.7.1",
     "@web3auth/web3auth": "^0.3.2",
     "dayjs": "^1.10.7",
+    "eth-hooks": "^4.0.44",
+    "ethers": "^5.5.4",
     "framer-motion": "^5",
     "fuse.js": "^6.5.3",
     "gray-matter": "^4.0.3",

@@ -28,17 +28,13 @@ import {
             <chakra.a fontSize="2rem" fontWeight="700">
                 Update the Message!
             </chakra.a>
+            <DonateMoralis/>
             <Tabs>
             <TabList>
-                <Tab>with Moralis</Tab>
                 <Tab>with Ethers</Tab>
                 <Tab>with Web3</Tab>
             </TabList>
-
             <TabPanels>
-                <TabPanel>
-                    <DonateMoralis/>
-                </TabPanel>
                 <TabPanel>
                     <DonateEthers/>
                 </TabPanel>

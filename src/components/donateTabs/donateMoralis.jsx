@@ -1,7 +1,9 @@
 import { useMoralis } from "react-moralis";
+import React, { useState } from 'react'; 
 import {
     Box,
     Button,
+    Code,
     Heading,
     Text,
     useColorModeValue,
@@ -9,15 +11,30 @@ import {
 
 export default function DonateMoralis() {
     const { authenticate, isAuthenticated, user } = useMoralis();
+    const [loadingState, setLoadingState] = useState(false)
+    function loadingAuthenticate(){
+        setLoadingState(true)
+        authenticate
+        setLoadingState(false)
+    }
 
   return (
     <Box>
-        <Text>
+        {!isAuthenticated? 
+        <Box m={2}>
+            <Text>
             Sign In With Moralis
-        </Text>
-        <Button onClick={authenticate} >
-            {!isAuthenticated? "Sign In" : "Connected"}
-        </Button>
+            </Text>
+            <Button onClick={loadingAuthenticate} m={2} isLoading={loadingState}>
+                Sign In
+            </Button>
+        </Box>
+        :
+        <Box m={2}>
+        <Text> Signed In With: </Text> 
+        <Code>{user.get("username")}</Code>
+        </Box>
+        }
     </Box>
   )
 }
